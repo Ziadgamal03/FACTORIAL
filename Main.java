@@ -1,32 +1,22 @@
 package src;
 
-
-
 import java.util.Scanner;
 
 public class Main {
-
-
+    public int fact=1;
+    public int factorial(int n) {
+        for (int i = n; i > 0; i--) {
+            fact=fact*i;
+        }
+        return fact;
+    }
     public static void main(String[] args) {
-        Scanner obj = new Scanner(System.in);
-        System.out.println("Enter number");
-        int num = obj.nextInt();
-        int fact=1;
-       for (int i =num; i > 0; i--) {
-           fact=fact*i;
-       }
-       System.out.println(" FACTORIAL IS EQUAL"+fact);
-
+        Scanner Obj = new Scanner(System.in);
+        System.out.println("Enter the number");
+        int value = Obj.nextInt();
+        Main obj1 = new Main();
+        int num =obj1.factorial(value);
+        System.out.println("the value is "+num );
 
     }
-
-
-
-
-
-
-
-
-
-
-    }
+}
